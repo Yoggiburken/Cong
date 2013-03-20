@@ -10,10 +10,10 @@ const Vector2f          TITLE_POSITION(WINDOW_WIDTH/2 - TITLE_WIDTH, 50);
 
 int main()
 {
-    RenderWindow                App(VideoMode(WIDTH, HEIGHT), "Cong");
+    RenderWindow                App(VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Cong");
     Event                       event;
     RectangleShape              title(Vector2f(100,20));
-    title.setPosition(
+    title.setPosition(TITLE_POSITION);
 
     while(App.isOpen())
     {
