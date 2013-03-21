@@ -1,13 +1,16 @@
-#ifndef __PLAYER__
-#define __PLAYER__
+#include <SFML/Graphics.hpp>
 
-class Player
+#ifndef __PADDLE__
+#define __PADDLE__
+
+class Paddle
 {
 private:
-    int                 playerID;
+    int                 paddleID;
+    sf::Vector2f        position;
 public:
+    Paddle();
     void move();
-    
 };
 
 #endif
