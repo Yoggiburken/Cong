@@ -47,6 +47,10 @@ int main()
             if(Keyboard::isKeyPressed(Keyboard::Escape)) {
                 App.close();
             }
+
+            if(Keyboard::isKeyPressed(Keyboard::K)) {
+
+            }
         }
 
         App.clear();
