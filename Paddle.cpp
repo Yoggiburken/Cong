@@ -1,7 +1,4 @@
-#include <iostream>
 #include "Paddle.hpp"
-
-using namespace std;
 
 Paddle::Paddle(int playerID)
 {

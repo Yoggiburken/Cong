@@ -1,4 +1,5 @@
-
+#ifndef __BUTTON__
+#define __BUTTON__
 
 class Button {
     
@@ -22,3 +23,5 @@ public:
     void                    setBoxSize();
     void                    setBoxColor();
 };
+
+#endif

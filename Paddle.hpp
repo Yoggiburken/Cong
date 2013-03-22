@@ -1,4 +1,5 @@
 #include <SFML/Graphics.hpp>
+#include "Score.hpp"
 
 #ifndef __PADDLE__
 #define __PADDLE__
@@ -10,8 +11,11 @@ class Paddle
 {
 private:
     int                 paddleID;
-public:
+    int                 width;
+    int                 height;
     sf::Vector2f        position;
+    Score score;
+public:
     Paddle(int);
     void movePaddle(move);
 };
