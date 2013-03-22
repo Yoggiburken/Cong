@@ -24,10 +24,3 @@ void Paddle::movePaddle(move m)
         position.y -= 10;
     }
 }
-
-/*bool Paddle::collision()
-{
-    if (position.x + width + 15 <= ) {
-        cout << a <<endl;
-    }
-}*/

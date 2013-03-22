@@ -17,7 +17,6 @@ private:
 public:
                             Paddle(int);
     void                    movePaddle(move);
-    //bool                  collision();
 };
 
 #endif
