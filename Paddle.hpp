@@ -13,7 +13,6 @@ private:
     int                     width;
     int                     height;
     sf::Vector2f            position;
-    Score                   score;
 public:
                             Paddle(int);
     void                    movePaddle(move);
