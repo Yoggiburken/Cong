@@ -5,19 +5,19 @@
 #define __PADDLE__
 
 enum move { up, down };
-//extern move movement;
 
 class Paddle
 {
 private:
-    int                 paddleID;
-    int                 width;
-    int                 height;
-    sf::Vector2f        position;
-    Score score;
+    int                     paddleID;
+    int                     width;
+    int                     height;
+    sf::Vector2f            position;
+    Score                   score;
 public:
-    Paddle(int);
-    void movePaddle(move);
+                            Paddle(int);
+    void                    movePaddle(move);
+    //bool                  collision();
 };
 
 #endif
