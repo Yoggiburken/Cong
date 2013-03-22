@@ -5,11 +5,13 @@ using namespace sf;
 
 Ball::Ball()
 {
-    position.x = 400;
-    position.y = 400;
+    position.x  = 400;
+    position.y  = 400;
 
-    velocity.x = 10;
-    velocity.y = 3;
+    velocity.x  = 10;
+    velocity.y  = 3;
+
+    radius      = 5
 }
 void Ball::move()
 {
