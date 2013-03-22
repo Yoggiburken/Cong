@@ -1,4 +1,5 @@
 #include<SFML/Graphics.hpp>
+#include"Button.hpp"
 using namespace std;
 using namespace sf;
 

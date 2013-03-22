@@ -9,7 +9,7 @@ class Button : public sf::Drawable
     sf::Font                font; 
     sf::Text                text; 
     std::string             textString;
-    int                     textiCharacterSize;
+    int                     textCharacterSize;
     sf::Color               textColor;
     sf::Vector2f            textPosition;
     sf::RectangleShape      box;
@@ -18,7 +18,7 @@ class Button : public sf::Drawable
     sf::Vector2f            boxPosition;
 
 public:
-                            Button(std::string&, sf::Vector2f&, int, sf::Color&);
+                            Button(std::string&, sf::Vector2f&, std::string&, int, sf::Color&);
     void                    setButtonPosition(void);
     void                    setTextColor(void);
     void                    setTextFont(void);
