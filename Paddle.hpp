@@ -1,5 +1,4 @@
 #include <SFML/Graphics.hpp>
-#include "Score.hpp"
 
 #ifndef __PADDLE__
 #define __PADDLE__
