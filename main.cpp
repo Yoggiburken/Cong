@@ -44,6 +44,7 @@ int main()
             if(event.type == Event::Closed) {
                 App.close();
             }
+
             if(Keyboard::isKeyPressed(Keyboard::Escape)) {
                 App.close();
             }
