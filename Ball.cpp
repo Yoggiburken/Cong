@@ -11,7 +11,7 @@ Ball::Ball()
     velocity.x  = 10;
     velocity.y  = 3;
 
-    radius      = 5
+    radius      = 5;
 }
 void Ball::move()
 {

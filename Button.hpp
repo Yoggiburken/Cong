@@ -1,18 +1,21 @@
+#include<SFML/Graphics.hpp>
+
+
 #ifndef __BUTTON__
 #define __BUTTON__
 
-class Button {
+class Button : public sf::Drawable {
     
-    Font                    font; 
-    Text                    text; 
-    string                  textString;
+    sf::Font                font; 
+    sf::Text                text; 
+    std::string             textString;
     int                     textiCharacterSize;
-    Color                   textColor;
-    Vector2f                textPosition();
-    RectangleShape          box;
-    Color                   boxColor;
-    Vector2f                boxSize;
-    Vector2f                boxPosition;
+    sf::Color               textColor;
+    sf::Vector2f            textPosition();
+    sf::RectangleShape      box;
+    sf::Color               boxColor;
+    sf::Vector2f            boxSize;
+    sf::Vector2f            boxPosition;
 
 public:
     void                    setButtonPosition();
@@ -22,6 +25,7 @@ public:
     void                    setTextSize();
     void                    setBoxSize();
     void                    setBoxColor();
+    virtual void            draw(sf::RenderTarget &target) const;
 };
 
 #endif
