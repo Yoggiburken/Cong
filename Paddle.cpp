@@ -11,6 +11,9 @@ Paddle::Paddle(int playerID)
         position.x = 700;
         position.y = 0;
     }
+
+    width  = 10;
+    height = 50;
 }
 
 void Paddle::movePaddle(move m)

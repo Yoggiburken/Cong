@@ -8,8 +8,9 @@ using namespace sf;
 class Ball
 {
 private:
-    sf::Vector2f                position;
-    sf::Vector2f                velocity;
+    sf::Vector2f            position;
+    sf::Vector2f            velocity;
+    int                     radius;
 public:
     Ball();
     void move();
