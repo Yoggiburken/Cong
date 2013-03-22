@@ -8,11 +8,13 @@ Button::Button( std::string whatTextString, sf::Vector2f whatTextPosition, std::
     textColor           = whatTextColor;
 
     font.loadFromFile(fontName.c_str());
+    
     text.setFont(font);
     text.setString(textString);
     text.setPosition(textPosition);
     text.setCharacterSize(textCharacterSize);
     text.setColor(textColor);
+    
     box.setSize(sf::Vector2f(text.getGlobalBounds().width, text.getGlobalBounds().height));
     box.setPosition(textPosition);
     box.setFillColor(sf::Color(50,50,50));
