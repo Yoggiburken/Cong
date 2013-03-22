@@ -18,7 +18,7 @@ class Button : public sf::Drawable
     sf::Vector2f            boxPosition;
 
 public:
-                            Button(std::string&, sf::Vector2f&, std::string&, int, sf::Color&);
+                            Button(std::string, sf::Vector2f, std::string, int, sf::Color);
     void                    setButtonPosition(void);
     void                    setTextColor(void);
     void                    setTextFont(void);
@@ -26,7 +26,7 @@ public:
     void                    setTextSize(void);
     void                    setBoxSize(void);
     void                    setBoxColor(void);
-    virtual void            draw(sf::RenderTarget &target) const;
+    virtual void            draw(sf::RenderTarget &target, sf::RenderStates ) const;
 };
 
 #endif
