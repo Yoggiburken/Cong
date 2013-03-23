@@ -28,6 +28,7 @@ public:
     void                    setTextSize(void);
     void                    setBoxSize(void);
     void                    setBoxColor(void);
+    void                    davidCenter(void);
     virtual void            draw(sf::RenderTarget &target, sf::RenderStates ) const;
 };
 
