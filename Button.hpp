@@ -16,6 +16,7 @@ class Button : public sf::Drawable
     sf::Color               boxColor;
     sf::Vector2f            boxSize;
     sf::Vector2f            boxPosition;
+    static int              buttonID;
 
 public:
                             Button(std::string, sf::Vector2f, std::string, int, sf::Color);

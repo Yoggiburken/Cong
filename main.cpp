@@ -9,7 +9,8 @@ const int                   WINDOW_HEIGHT = 600;
 
 int main()
 {
-    Button title(string("CONG"), Vector2f(0,0), string("Feisar.ttf"), 30, Color(0,0,0)); 
+    Button title(string("CONG"), Vector2f(WINDOW_WIDTH/2, 0), string("Feisar.ttf"), 50, Color(0,0,0));
+    Button play(string("PLAY"), Vector2f(WINDOW_WIDTH/2, 0), string("Feisar.ttf"), 30, Color(0,0,0));
     RenderWindow App(VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Cong!");
     Event event;
 
@@ -32,6 +33,7 @@ int main()
 
         App.clear();
         App.draw(title);
+        App.draw(play);
         App.display();
     }
 }
