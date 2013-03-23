@@ -20,7 +20,7 @@ class Button : public sf::Drawable
     bool                    clickable;
 
 public:
-                            Button(std::string, sf::Vector2f, std::string, int, sf::Color, bool);
+                            Button(std::string, sf::Vector2f, std::string, int, sf::Color);
     void                    setButtonPosition(void);
     void                    setTextColor(void);
     void                    setTextFont(void);
