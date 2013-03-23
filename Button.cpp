@@ -13,7 +13,7 @@ Button::Button(std::string whatTextString, sf::Vector2f whatTextPosition, std::s
     textString          = whatTextString;
     textCharacterSize   = whatTextSize;
     textColor           = whatTextColor;
-    textIsCentered      = true;
+    
     text.setFont(font);
     text.setString(textString); 
     text.setCharacterSize(textCharacterSize);

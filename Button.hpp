@@ -18,7 +18,6 @@ class Button : public sf::Drawable
     sf::Vector2f            boxPosition;
     static int              buttonID;
     bool                    clickable;
-    bool                    textIsCentered;
 
 public:
                             Button(std::string, sf::Vector2f, std::string, int, sf::Color);
@@ -29,7 +28,6 @@ public:
     void                    setTextSize(void);
     void                    setBoxSize(void);
     void                    setBoxColor(void);
-    void                    davidCenter(void);
     virtual void            draw(sf::RenderTarget &target, sf::RenderStates ) const;
 };
 
