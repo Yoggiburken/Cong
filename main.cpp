@@ -9,7 +9,7 @@ const int                   WINDOW_HEIGHT = 600;
 
 int main()
 {
-    Button title(string("CONG"), Vector2f(0,0), string("Feisar.ttf"), 30, Color(0,0,0)); 
+    Button title(string("CONG"), Vector2f(100,100), string("Feisar.ttf"), 50, Color(0,0,0)); 
     RenderWindow App(VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Cong!");
     Event event;
 
