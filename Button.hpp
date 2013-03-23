@@ -17,9 +17,10 @@ class Button : public sf::Drawable
     sf::Vector2f            boxSize;
     sf::Vector2f            boxPosition;
     static int              buttonID;
+    bool                    clickable;
 
 public:
-                            Button(std::string, sf::Vector2f, std::string, int, sf::Color);
+                            Button(std::string, sf::Vector2f, std::string, int, sf::Color, bool);
     void                    setButtonPosition(void);
     void                    setTextColor(void);
     void                    setTextFont(void);
