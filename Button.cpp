@@ -6,7 +6,6 @@ using namespace std;
 const int                   PADDING = 15;
 int                         Button::buttonID = 0;
 
-
 Button::Button(std::string whatTextString, sf::Vector2f whatTextPosition, std::string fontName, int whatTextSize, sf::Color whatTextColor, bool clickable)
 { 
     font.loadFromFile(fontName.c_str());
@@ -22,8 +21,10 @@ Button::Button(std::string whatTextString, sf::Vector2f whatTextPosition, std::s
     
     box.setFillColor(sf::Color(100,100,100));
     box.setSize(sf::Vector2f(text.getGlobalBounds().width, text.getGlobalBounds().height));
+}
 
-
+void Button::davidCenter()
+{
     sf::FloatRect textRect = text.getLocalBounds();
     text.setOrigin( textRect.left + textRect.width/2.f, textRect.top );
     text.setPosition(sf::Vector2f(whatTextPosition));
@@ -31,10 +32,6 @@ Button::Button(std::string whatTextString, sf::Vector2f whatTextPosition, std::s
     sf::FloatRect boxRect = box.getLocalBounds();
     box.setOrigin( boxRect.left + boxRect.width/2.f, boxRect.top );
     box.setPosition(sf::Vector2f(whatTextPosition));
-
-    buttonID++;
-
-    this->clickable = clickable;
 }
 
 void Button::draw(sf::RenderTarget& target, sf::RenderStates states) const 
