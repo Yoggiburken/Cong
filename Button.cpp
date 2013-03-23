@@ -19,15 +19,22 @@ Button::Button(std::string whatTextString, sf::Vector2f whatTextPosition, std::s
     text.setCharacterSize(textCharacterSize);
     text.setColor(textColor);
     
-    box.setSize(sf::Vector2f(text.getGlobalBounds().width, text.getGlobalBounds().height));
-    box.setPosition(sf::Vector2f(text.getGlobalBounds().left - (box.getGlobalBounds().width - text.getGlobalBounds().width)/2 
-                                ,text.getGlobalBounds().top - (box.getGlobalBounds().height - text.getGlobalBounds().height)/2 ));
-    box.setFillColor(sf::Color(255,255,255));
+    button.setSize(sf::Vector2f(text.getGlobalBounds().width, text.getGlobalBounds().height));
+    button.setPosition(sf::Vector2f(text.getGlobalBounds().left - (button.getGlobalBounds().width - text.getGlobalBounds().width)/2, 
+                                 text.getGlobalBounds().top - (button.getGlobalBounds().height - text.getGlobalBounds().height)/2 ));
+    button.setFillColor(sf::Color(255,255,255));
 }
 
 
+void Button::setButtonSize(double width, double height)
+{
+    button.setSize(sf::Vector2f(width, height));
+    button.setPosition(sf::Vector2f(text.getGlobalBounds().left - (button.getGlobalBounds().width - text.getGlobalBounds().width)/2, 
+                                 text.getGlobalBounds().top - (button.getGlobalBounds().height - text.getGlobalBounds().height)/2));
+}
+
 void Button::draw(sf::RenderTarget& target, sf::RenderStates states) const 
 {
-    target.draw(box);
+    target.draw(button);
     target.draw(text);
 }

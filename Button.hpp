@@ -12,10 +12,10 @@ class Button : public sf::Drawable
     int                     textCharacterSize;
     sf::Color               textColor;
     sf::Vector2f            textPosition;
-    sf::RectangleShape      box;
-    sf::Color               boxColor;
-    sf::Vector2f            boxSize;
-    sf::Vector2f            boxPosition;
+    sf::RectangleShape      button;
+    sf::Color               buttonColor;
+    sf::Vector2f            buttonSize;
+    sf::Vector2f            buttonPosition;
     static int              buttonID;
     bool                    clickable;
 
@@ -26,8 +26,8 @@ public:
     void                    setTextFont(void);
     void                    setTextString(void);
     void                    setTextSize(void);
-    void                    setBoxSize(void);
-    void                    setBoxColor(void);
+    void                    setButtonSize(double, double);
+    void                    setButtonColor(void);
     virtual void            draw(sf::RenderTarget &target, sf::RenderStates ) const;
 };
 
