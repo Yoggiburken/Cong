@@ -18,6 +18,7 @@ class Button : public sf::Drawable
     sf::Vector2f            boxPosition;
     static int              buttonID;
     bool                    clickable;
+    bool                    textIsCentered;
 
 public:
                             Button(std::string, sf::Vector2f, std::string, int, sf::Color);

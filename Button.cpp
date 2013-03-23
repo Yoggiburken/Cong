@@ -13,7 +13,7 @@ Button::Button(std::string whatTextString, sf::Vector2f whatTextPosition, std::s
     textString          = whatTextString;
     textCharacterSize   = whatTextSize;
     textColor           = whatTextColor;
-
+    textIsCentered      = true;
     text.setFont(font);
     text.setString(textString); 
     text.setCharacterSize(textCharacterSize);
@@ -22,7 +22,7 @@ Button::Button(std::string whatTextString, sf::Vector2f whatTextPosition, std::s
     box.setSize(sf::Vector2f(text.getGlobalBounds().width, text.getGlobalBounds().height));
     box.setPosition(sf::Vector2f(text.getGlobalBounds().left - (box.getGlobalBounds().width - text.getGlobalBounds().width)/2 
                                 ,text.getGlobalBounds().top - (box.getGlobalBounds().height - text.getGlobalBounds().height)/2 ));
-    box.setFillColor(sf::Color(50,50,50));
+    box.setFillColor(sf::Color(255,255,255));
 }
 
 
