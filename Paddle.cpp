@@ -5,22 +5,28 @@ Paddle::Paddle(int playerID)
     paddleID = playerID;
     
     if (paddleID == 1) {
-        position.x = 0;
-        position.y = 250;
+        position = sf::Vector2f(0, 250);
     } else if (paddleID == 2) {
-        position.x = 790;
-        position.y = 250;
+        position = sf::Vector2f(790, 250);
     }
 
-    width  = 10;
-    height = 50;
+    paddle.setSize(sf::Vector2f(10,100));
+    paddle.setFillColor(sf::Color(255,255,255));
+    paddle.setPosition(position);
 }
 
 void Paddle::movePaddle(move m)
 {
     if (m == up) {
-        position.y += 10;
-    } else if (m == down) {
         position.y -= 10;
+    } else if (m == down) {
+        position.y += 10;
     }
+
+    paddle.setPosition(position);
+}
+
+void Paddle::draw(sf::RenderTarget &target, sf::RenderStates states) const
+{
+    target.draw(paddle);
 }

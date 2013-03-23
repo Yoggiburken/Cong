@@ -5,16 +5,16 @@
 
 enum move { up, down };
 
-class Paddle
+class Paddle: public sf::Drawable
 {
 private:
     int                     paddleID;
-    int                     width;
-    int                     height;
     sf::Vector2f            position;
+    sf::RectangleShape      paddle;
 public:
                             Paddle(int);
     void                    movePaddle(move);
+    virtual void            draw(sf::RenderTarget&, sf::RenderStates) const;
 };
 
 #endif
