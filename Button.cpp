@@ -1,12 +1,11 @@
 #include<iostream>
 #include"Button.hpp"
 
-using namespace std;
 
 const int                   PADDING = 15;
 int                         Button::buttonID = 0;
 
-Button::Button(std::string whatTextString, sf::Vector2f whatTextPosition, std::string fontName, int whatTextSize, sf::Color whatTextColor)
+Button::Button(std::string whatTextString, sf::Vector2f whatTextPosition, bool isClickable, int whatTextSize, sf::Color whatTextColor, std::string fontName)
 { 
     font.loadFromFile(fontName.c_str());
 
