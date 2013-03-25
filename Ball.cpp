@@ -10,9 +10,9 @@ Ball::Ball()
 
     velocity                    = sf::Vector2f(5,0);
 
-    radius                      = 5;
+    dimensions                  = sf::Vector2f(10,10);
 
-    ball.setRadius(radius);
+    ball.setSize(dimensions);
     ball.setPosition(position);
     ball.setFillColor(sf::Color(255,255,255));
 }

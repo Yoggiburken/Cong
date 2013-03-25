@@ -8,10 +8,10 @@ using namespace sf;
 class Ball: public sf::Drawable
 {
 private:
-    sf::CircleShape             ball;
+    sf::RectangleShape          ball;
     sf::Vector2f                position;
     sf::Vector2f                velocity;
-    int                         radius;
+    sf::Vector2f                dimensions;
 public:
                                 Ball();
     void                        move();
