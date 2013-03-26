@@ -52,6 +52,10 @@ int main()
             paddleRight.movePaddle(down);
         }
         ball.move();
+        ball.collision();
+
+        paddleLeft.collision(ball);
+        paddleRight.collision(ball);
 
         App.clear();
         App.draw(title);

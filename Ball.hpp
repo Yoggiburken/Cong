@@ -9,12 +9,13 @@ class Ball: public sf::Drawable
 {
 private:
     sf::RectangleShape          ball;
-    sf::Vector2f                position;
-    sf::Vector2f                velocity;
     sf::Vector2f                dimensions;
 public:
+    sf::Vector2f                position;
+    sf::Vector2f                velocity;
                                 Ball();
     void                        move();
+    void                        collision();
     virtual void                draw(sf::RenderTarget&, sf::RenderStates) const;
 };
 

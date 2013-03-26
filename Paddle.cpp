@@ -15,11 +15,28 @@ Paddle::Paddle(int playerID)
     paddle.setPosition(position);
 }
 
+void Paddle::collision(Ball &ball)
+{
+    if (ball.velocity.x > 0) {
+        if (ball.position.x == position.x-10) {
+            if (ball.position.y >= position.y && ball.position.y <= position.y+100) {
+                ball.velocity.x *= -1;
+            }
+        }
+    } else if (ball.velocity.x < 0) {
+        if (ball.position.x == position.x+10) {
+            if (ball.position.y >= position.y && ball.position.y <= position.y+100) {
+                ball.velocity.x *= -1;
+            }
+        }
+    }
+}
+
 void Paddle::movePaddle(move m)
 {
-    if (m == up) {
+    if (m == up && position.y > 0) {
         position.y -= 10;
-    } else if (m == down) {
+    } else if (m == down && position.y < 500) {
         position.y += 10;
     }
 

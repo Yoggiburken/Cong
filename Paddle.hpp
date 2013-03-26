@@ -1,4 +1,5 @@
 #include <SFML/Graphics.hpp>
+#include "Ball.hpp"
 
 #ifndef __PADDLE__
 #define __PADDLE__
@@ -14,6 +15,7 @@ private:
 public:
                             Paddle(int);
     void                    movePaddle(move);
+    void                    collision(Ball&);
     virtual void            draw(sf::RenderTarget&, sf::RenderStates) const;
 };
 
