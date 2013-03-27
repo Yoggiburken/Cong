@@ -1,5 +1,4 @@
-#include<iostream>
-using namespace std;
+#include<SFML/Audio.hpp>
 #include<cmath>
 #include "Paddle.hpp"
 
@@ -11,9 +10,13 @@ Paddle::Paddle(int playerID)
     
     if (paddleID == 1) {
         position = sf::Vector2f(0, 250);
+        buffer.loadFromFile("pongBounce1.wav");
     } else if (paddleID == 2) {
         position = sf::Vector2f(790, 250);
+        buffer.loadFromFile("pongBounce2.wav");
     }
+
+    bounceNoise.setBuffer(buffer);
 
     paddle.setSize(sf::Vector2f(10,100));
     paddle.setFillColor(sf::Color(255,255,255));
@@ -28,6 +31,7 @@ void Paddle::collision(Ball &ball)
                 double x = (ball.position.y + ball.dimensions.y/2 - (position.y + paddle.getSize().y/2)) / paddle.getSize().y;
                 ball.velocity.x     = -cos(x*70*PI/180)*10;
                 ball.velocity.y     =  sin(x*70*PI/180)*10;
+                bounceNoise.play();
             }
         }
     } else if (ball.velocity.x < 0 && paddleID == 1) {
@@ -36,6 +40,7 @@ void Paddle::collision(Ball &ball)
                 double x = (position.y + paddle.getSize().y/2 - (ball.position.y + ball.dimensions.y/2)) / paddle.getSize().y;
                 ball.velocity.x     =  cos(x*70*PI/180)*10;
                 ball.velocity.y     = -sin(x*70*PI/180)*10;
+                bounceNoise.play();
             }
         }
     }

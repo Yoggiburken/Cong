@@ -1,3 +1,4 @@
+#include<SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 #include "Ball.hpp"
 
@@ -12,6 +13,8 @@ private:
     int                     paddleID;
     sf::Vector2f            position;
     sf::RectangleShape      paddle;
+    sf::SoundBuffer         buffer;
+    sf::Sound               bounceNoise;
 public:
                             Paddle(int);
     void                    movePaddle(move);
