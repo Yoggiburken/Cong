@@ -8,7 +8,7 @@ Ball::Ball()
 {
     position                    = sf::Vector2f(400,300);
 
-    velocity                    = sf::Vector2f(5,1);
+    velocity                    = sf::Vector2f(10,2);
 
     dimensions                  = sf::Vector2f(10,10);
 
