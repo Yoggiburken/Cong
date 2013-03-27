@@ -24,6 +24,11 @@ void Ball::collision()
     } else if (position.y >= 600 - dimensions.y && velocity.y > 0) {
         velocity.y *= -1;
     }
+    if (position.x < 0) {
+       //dö 
+    } else if (position.x + dimensions.x >= 800) {
+        //dö
+    }
 }
 void Ball::move()
 {
