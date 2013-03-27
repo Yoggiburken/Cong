@@ -8,7 +8,7 @@ Ball::Ball()
 {
     position                    = sf::Vector2f(400,300);
 
-    velocity                    = sf::Vector2f(10,2);
+    velocity                    = sf::Vector2f(-10,2);
 
     dimensions                  = sf::Vector2f(10,10);
 
@@ -25,9 +25,11 @@ void Ball::collision()
         velocity.y *= -1;
     }
     if (position.x < 0) {
-       //dö 
+        position = sf::Vector2f(400,300);
+        velocity = sf::Vector2f(-10,2);
     } else if (position.x + dimensions.x >= 800) {
-        //dö
+        position = sf::Vector2f(400,300);
+        velocity = sf::Vector2f(-10,2);
     }
 }
 void Ball::move()
