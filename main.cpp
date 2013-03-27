@@ -8,7 +8,6 @@ using namespace sf;
 const int                   WINDOW_WIDTH = 800;
 const int                   WINDOW_HEIGHT = 600;
 
-
 int main()
 {
     Button title(string("CONG"), Vector2f(100,100), false, 50, Color(0,0,0));
