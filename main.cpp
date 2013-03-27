@@ -20,7 +20,7 @@ int main()
     RenderWindow App(VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Cong!");
     Event event;
 
-    App.setFramerateLimit(60);
+    App.setVerticalSyncEnabled(true);
 
     while(App.isOpen())
     {
