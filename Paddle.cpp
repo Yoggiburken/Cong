@@ -24,16 +24,16 @@ void Paddle::collision(Ball &ball)
         if (ball.position.x+ball.dimensions.x >= position.x) {
             if (ball.position.y >= position.y && ball.position.y <= position.y+100) {
                 double x = (ball.position.y + ball.dimensions.y/2 - (position.y + paddle.getSize().y/2)) / paddle.getSize().y;
-                ball.velocity.x     = -cos(x*70/114.5)*10;
-                ball.velocity.y     =  sin(x*70/114.5)*10;
+                ball.velocity.x     = -cos(x*70/114.59)*10;
+                ball.velocity.y     =  sin(x*70/114.59)*10;
             }
         }
     } else if (ball.velocity.x < 0 && paddleID == 1) {
         if (ball.position.x-ball.dimensions.x <= position.x) {
             if (ball.position.y >= position.y && ball.position.y <= position.y+100) {
                 double x = (position.y + paddle.getSize().y/2 - (ball.position.y + ball.dimensions.y/2)) / paddle.getSize().y;
-                ball.velocity.x     = cos(x*70/114.5)*10;
-                ball.velocity.y     = sin(x*70/114.5)*10;
+                ball.velocity.x     = cos(x*70/114.59)*10;
+                ball.velocity.y     = sin(x*70/114.59)*10;
             }
         }
     }
