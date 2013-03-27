@@ -1,3 +1,6 @@
+#include<iostream>
+using namespace std;
+#include<cmath>
 #include "Paddle.hpp"
 
 Paddle::Paddle(int playerID)
@@ -17,16 +20,22 @@ Paddle::Paddle(int playerID)
 
 void Paddle::collision(Ball &ball)
 {
-    if (ball.velocity.x > 0) {
-        if (ball.position.x == position.x-10) {
+    if (ball.velocity.x > 0 && paddleID == 2) {
+        if (ball.position.x+ball.dimensions.x >= position.x) {
             if (ball.position.y >= position.y && ball.position.y <= position.y+100) {
-                ball.velocity.x *= -1;
+                double x = (position.y + paddle.getSize().y/2 - (ball.position.y + ball.dimensions.y/2)) / paddle.getSize().y;
+                cout<<x<<endl;
+                ball.velocity.x     = -cos(x*60)*10;
+                ball.velocity.y     =  sin(x*60)*10;
             }
         }
-    } else if (ball.velocity.x < 0) {
-        if (ball.position.x == position.x+10) {
+    } else if (ball.velocity.x < 0 && paddleID == 1) {
+        if (ball.position.x-ball.dimensions.x <= position.x) {
             if (ball.position.y >= position.y && ball.position.y <= position.y+100) {
-                ball.velocity.x *= -1;
+                double x = (position.y + paddle.getSize().y/2 - (ball.position.y + ball.dimensions.y/2)) / paddle.getSize().y;
+                cout<<x<<endl;
+                ball.velocity.x     = cos(x*60)*10;
+                ball.velocity.y     = sin(x*60)*10;
             }
         }
     }

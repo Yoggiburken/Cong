@@ -19,9 +19,9 @@ Ball::Ball()
 
 void Ball::collision()
 {
-    if (position.y == 0 && velocity.y < 0) {
+    if (position.y <= 0 && velocity.y < 0) {
         velocity.y *= -1;
-    } else if (position.y == 600 - dimensions.y && velocity.y > 0) {
+    } else if (position.y >= 600 - dimensions.y && velocity.y > 0) {
         velocity.y *= -1;
     }
 }

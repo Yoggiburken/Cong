@@ -51,8 +51,8 @@ int main()
         if (Keyboard::isKeyPressed(Keyboard::M)) {
             paddleRight.movePaddle(down);
         }
-        ball.move();
         ball.collision();
+        ball.move();
 
         paddleLeft.collision(ball);
         paddleRight.collision(ball);

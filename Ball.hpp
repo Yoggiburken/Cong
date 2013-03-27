@@ -9,8 +9,8 @@ class Ball: public sf::Drawable
 {
 private:
     sf::RectangleShape          ball;
-    sf::Vector2f                dimensions;
 public:
+    sf::Vector2f                dimensions;
     sf::Vector2f                position;
     sf::Vector2f                velocity;
                                 Ball();
