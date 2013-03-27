@@ -1,4 +1,5 @@
 #include <SFML/Graphics.hpp>
+#include<SFML/Audio.hpp>
 
 using namespace sf;
 
@@ -9,6 +10,8 @@ class Ball: public sf::Drawable
 {
 private:
     sf::RectangleShape          ball;
+    sf::SoundBuffer             buffer;
+    sf::Sound                   scoreGained;
 public:
     sf::Vector2f                dimensions;
     sf::Vector2f                position;
