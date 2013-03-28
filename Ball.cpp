@@ -1,14 +1,17 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include <ctime>
 #include "Ball.hpp"
 
 using namespace std;
 
+
 Ball::Ball()
 {
+    srand(time(NULL));
     position                    = sf::Vector2f(400,300);
 
-    velocity                    = sf::Vector2f(-10,2);
+    velocity                    = sf::Vector2f(10-20*(rand()%2),rand()%5-2);
 
     dimensions                  = sf::Vector2f(10,10);
 
@@ -28,13 +31,16 @@ void Ball::collision()
         velocity.y *= -1;
     }
     if (position.x < 0) {
+
+        srand(time(NULL));
         scoreGained.play();
         position = sf::Vector2f(400,300);
-        velocity = sf::Vector2f(-10,2);
+        velocity = sf::Vector2f(10-20*(rand()%2),rand()%5-2);
     } else if (position.x + dimensions.x >= 800) {
+        srand(time(NULL));
         scoreGained.play();
         position = sf::Vector2f(400,300);
-        velocity = sf::Vector2f(-10,2);
+        velocity = sf::Vector2f(10-20*(rand()%2),rand()%5-2);
     }
 }
 void Ball::move(Time &ElapsedTime)
