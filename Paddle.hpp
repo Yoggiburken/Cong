@@ -17,7 +17,7 @@ private:
     sf::Sound               bounceNoise;
 public:
                             Paddle(int);
-    void                    movePaddle(move);
+    void                    movePaddle(move, sf::Time&);
     void                    collision(Ball&);
     virtual void            draw(sf::RenderTarget&, sf::RenderStates) const;
 };

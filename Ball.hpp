@@ -17,7 +17,7 @@ public:
     sf::Vector2f                position;
     sf::Vector2f                velocity;
                                 Ball();
-    void                        move();
+    void                        move(Time&);
     void                        collision();
     virtual void                draw(sf::RenderTarget&, sf::RenderStates) const;
 };

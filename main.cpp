@@ -18,6 +18,9 @@ int main()
 
     RenderWindow App(VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Cong!");
     Event event;
+    Time ElapsedTime;
+    Clock clock;
+    
 
     App.setVerticalSyncEnabled(true);
 
@@ -35,26 +38,30 @@ int main()
 
         }
 
+        paddleLeft.collision(ball);
+        paddleRight.collision(ball);
+        ElapsedTime = clock.getElapsedTime();
+        clock.restart();
+
         if (Keyboard::isKeyPressed(Keyboard::C)) {
-            paddleLeft.movePaddle(down);
+            paddleLeft.movePaddle(down, ElapsedTime);
         }
 
         if (Keyboard::isKeyPressed(Keyboard::D)) {
-            paddleLeft.movePaddle(up);
+            paddleLeft.movePaddle(up, ElapsedTime);
         }
 
         if (Keyboard::isKeyPressed(Keyboard::K)) {
-            paddleRight.movePaddle(up);
+            paddleRight.movePaddle(up, ElapsedTime);
         }
 
         if (Keyboard::isKeyPressed(Keyboard::M)) {
-            paddleRight.movePaddle(down);
+            paddleRight.movePaddle(down, ElapsedTime);
         }
-        ball.collision();
-        ball.move();
 
-        paddleLeft.collision(ball);
-        paddleRight.collision(ball);
+        ball.collision();
+
+        ball.move(ElapsedTime);
 
         App.clear();
         App.draw(title);

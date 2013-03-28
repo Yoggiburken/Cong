@@ -37,10 +37,10 @@ void Ball::collision()
         velocity = sf::Vector2f(-10,2);
     }
 }
-void Ball::move()
+void Ball::move(Time &ElapsedTime)
 {
-    position.x                  += velocity.x;
-    position.y                  += velocity.y;
+    position.x                  += velocity.x*ElapsedTime.asSeconds()*50;
+    position.y                  += velocity.y*ElapsedTime.asSeconds()*50;
 
     ball.setPosition(position);
 }

@@ -12,13 +12,13 @@ Paddle::Paddle(int playerID)
         position = sf::Vector2f(0, 250);
         buffer.loadFromFile("pongBounce1.wav");
     } else if (paddleID == 2) {
-        position = sf::Vector2f(790, 250);
+        position = sf::Vector2f(780, 250);
         buffer.loadFromFile("pongBounce2.wav");
     }
 
     bounceNoise.setBuffer(buffer);
 
-    paddle.setSize(sf::Vector2f(10,100));
+    paddle.setSize(sf::Vector2f(20,100));
     paddle.setFillColor(sf::Color(255,255,255));
     paddle.setPosition(position);
 }
@@ -46,12 +46,12 @@ void Paddle::collision(Ball &ball)
     }
 }
 
-void Paddle::movePaddle(move m)
+void Paddle::movePaddle( move m, Time &ElapsedTime )
 {
-    if (m == up && position.y > 0) {
-        position.y -= 10;
+    if ( m == up && position.y > 0 ) {
+        position.y += -600*ElapsedTime.asSeconds();
     } else if (m == down && position.y < 500) {
-        position.y += 10;
+        position.y += 600*ElapsedTime.asSeconds();
     }
 
     paddle.setPosition(position);
