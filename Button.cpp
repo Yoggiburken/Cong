@@ -17,7 +17,8 @@ Button::Button(std::string whatTextString, sf::Vector2f whatTextPosition, bool i
     text.setString(textString); 
     text.setCharacterSize(textCharacterSize);
     text.setColor(textColor);
-    
+    text.setPosition(whatTextPosition);
+     
     button.setSize(sf::Vector2f(text.getGlobalBounds().width, text.getGlobalBounds().height));
     button.setPosition(sf::Vector2f(text.getGlobalBounds().left - (button.getGlobalBounds().width - text.getGlobalBounds().width)/2, 
                                  text.getGlobalBounds().top - (button.getGlobalBounds().height - text.getGlobalBounds().height)/2 ));
