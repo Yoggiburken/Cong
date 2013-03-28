@@ -28,6 +28,7 @@ void Paddle::collision(Ball &ball)
     if (ball.velocity.x > 0 && paddleID == 2) {
         if (ball.position.x+ball.dimensions.x >= position.x && ball.position.x <= position.x + paddle.getSize().x) {
             if (ball.position.y + ball.dimensions.y >= position.y && ball.position.y <= position.y+100) {
+                ball.position.x = position.x - ball.dimensions.x ;
                 double x = (ball.position.y + ball.dimensions.y/2 - (position.y + paddle.getSize().y/2)) / paddle.getSize().y;
                 ball.velocity.x     = -cos(x*70*PI/180)*10;
                 ball.velocity.y     =  sin(x*70*PI/180)*10;
@@ -37,6 +38,7 @@ void Paddle::collision(Ball &ball)
     } else if (ball.velocity.x < 0 && paddleID == 1) {
         if (ball.position.x-ball.dimensions.x <= position.x && ball.position.x + ball.dimensions.x >= position.x) {
             if (ball.position.y + ball.dimensions.y >= position.y && ball.position.y <= position.y+100) {
+                ball.position.x = position.x + paddle.getSize().x;
                 double x = (position.y + paddle.getSize().y/2 - (ball.position.y + ball.dimensions.y/2)) / paddle.getSize().y;
                 ball.velocity.x     =  cos(x*70*PI/180)*10;
                 ball.velocity.y     = -sin(x*70*PI/180)*10;
