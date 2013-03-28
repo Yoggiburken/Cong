@@ -12,13 +12,13 @@ Paddle::Paddle(int playerID)
         position = sf::Vector2f(0, 250);
         buffer.loadFromFile("pongBounce1.wav");
     } else if (paddleID == 2) {
-        position = sf::Vector2f(780, 250);
+        position = sf::Vector2f(790, 250);
         buffer.loadFromFile("pongBounce2.wav");
     }
 
     bounceNoise.setBuffer(buffer);
 
-    paddle.setSize(sf::Vector2f(20,100));
+    paddle.setSize(sf::Vector2f(10,100));
     paddle.setFillColor(sf::Color(255,255,255));
     paddle.setPosition(position);
 }
