@@ -29,9 +29,9 @@ Button::Button(std::string whatTextString, sf::Vector2f whatTextPosition, bool i
 }
 
 
-void Button::setButtonSize(double width, double height)
+void Button::setButtonSize(sf::Vector2f &newSize)
 {
-    button.setSize(sf::Vector2f(width, height));
+    button.setSize(newSize);
     button.setPosition(sf::Vector2f(text.getGlobalBounds().left - (button.getGlobalBounds().width - text.getGlobalBounds().width)/2, 
                                     text.getGlobalBounds().top - (button.getGlobalBounds().height - text.getGlobalBounds().height)/2));
 }

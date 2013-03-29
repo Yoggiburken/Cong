@@ -10,7 +10,7 @@ const int                   WINDOW_HEIGHT = 600;
 
 int main()
 {
-    Button title(string("CONG"), Vector2f(WINDOW_WIDTH/2,50), false, 50, Color(0,0,0), true);
+    Button title(string("CONG"), Vector2f(WINDOW_WIDTH/2,30), false, 50, Color(0,0,0), true);
     Button play(string("PLAY"), Vector2f(WINDOW_WIDTH/2,100), false, 40, Color(0,0,0), true);
     Ball ball;
 
