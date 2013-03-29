@@ -22,8 +22,7 @@ int main()
     Time ElapsedTime;
     Clock clock;
     
-
-    App.setVerticalSyncEnabled(true);
+    //App.setVerticalSyncEnabled(true);
 
     while(App.isOpen())
     {
