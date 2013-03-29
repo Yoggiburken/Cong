@@ -10,8 +10,8 @@ const int                   WINDOW_HEIGHT = 600;
 
 int main()
 {
-    Button title(string("CONG"), Vector2f(100,100), false, 50, Color(0,0,0));
-    Button play(string("PLAY"), Vector2f(200,100), false, 40, Color(0,0,0));
+    Button title(string("CONG"), Vector2f(WINDOW_WIDTH/2,50), false, 50, Color(0,0,0), true);
+    Button play(string("PLAY"), Vector2f(WINDOW_WIDTH/2,100), false, 40, Color(0,0,0), true);
     Ball ball;
 
     Paddle paddleLeft(1);
