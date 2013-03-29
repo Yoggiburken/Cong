@@ -10,10 +10,10 @@ Paddle::Paddle(int playerID)
     
     if (paddleID == 1) {
         position = sf::Vector2f(0, 250);
-        buffer.loadFromFile("pongBounce1.wav");
+        buffer.loadFromFile("Resources/pongBounce1.wav");
     } else if (paddleID == 2) {
         position = sf::Vector2f(790, 250);
-        buffer.loadFromFile("pongBounce2.wav");
+        buffer.loadFromFile("Resources/pongBounce2.wav");
     }
 
     bounceNoise.setBuffer(buffer);

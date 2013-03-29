@@ -15,7 +15,7 @@ Ball::Ball()
 
     dimensions                  = sf::Vector2f(10,10);
 
-    buffer.loadFromFile("scoreGained.wav");
+    buffer.loadFromFile("Resources/scoreGained.wav");
     scoreGained.setBuffer(buffer);
 
     ball.setSize(dimensions);
