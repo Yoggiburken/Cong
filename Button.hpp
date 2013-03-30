@@ -20,14 +20,17 @@ class Button : public sf::Drawable
     bool                    clickable;
 
 public:
-                            Button(std::string, sf::Vector2f, bool, int, sf::Color, std::string fontName=std::string("Resources/Feisar.ttf"));
-    void                    setButtonPosition(void);
-    void                    setTextColor(void);
-    void                    setTextFont(void);
-    void                    setTextString(void);
-    void                    setTextSize(void);
-    void                    setButtonSize(double, double);
-    void                    setButtonColor(void);
+                            Button(std::string, sf::Vector2f, bool, int, sf::Color, bool, std::string fontName=std::string("Resources/Feisar.ttf"));
+    
+    void                    setTextColor(sf::Color &newColor)       { textColor         = newColor; text.setColor(textColor);}
+    void                    setTextFont(sf::Font &newFont)          { font              = newFont;}
+    void                    setTextFont(std::string &newFont)       { font.loadFromFile(newFont);}
+    void                    setTextString(std::string &newString)   { textString        = newString; text.setString(textString);}
+    void                    setTextSize(const int newSize)          { textCharacterSize = newSize; text.setCharacterSize(textCharacterSize);}
+    
+    void                    setButtonColor(sf::Color &newColor)     { buttonColor       = newColor; button.setFillColor(buttonColor);}
+    void                    setButtonSize(sf::Vector2f &newSize);
+
     virtual void            draw(sf::RenderTarget &target, sf::RenderStates ) const;
 };
 
